@@ -2,4 +2,4 @@
 
 ## Notre Projet
 
-Projet de formation.
+Projet de fin de formation de la session 23530 de l'AFPA.
