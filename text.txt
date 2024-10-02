@@ -1,0 +1,1 @@
+mysql --host=ct01.afpa-balma.fr --user= td_projet_23530_test --port=3306 --password=YgTu55mRrJcebxG0 td_projet_23530_test
