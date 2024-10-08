@@ -18,3 +18,7 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+require __DIR__.'/bleu.php';
+require __DIR__.'/orange.php';
+require __DIR__.'/rouge.php';
+require __DIR__.'/vert.php';
