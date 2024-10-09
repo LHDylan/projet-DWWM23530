@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('phone')->nullable();
-            $table->foreignId('role_id')->constrained('roles')->default(1);
+            $table->foreignId('role_id')->default(1)->constrained('roles');
             $table->enum('statut',['en_attente','validé','refusé'])->default('en_attente');
             $table->string('password');
             $table->rememberToken();
