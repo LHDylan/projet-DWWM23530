@@ -1,0 +1,48 @@
+body {
+    background-color: #fff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.login-container {
+    max-width: 400px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    letter-spacing: 0.05em;
+    font-size: 0.9rem;
+}
+
+.form-control {
+    border-radius: 8px;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+.btn-dark {
+    background-color: #000;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-dark:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+.link-dark {
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.link-dark:hover {
+    color: #333;
+    text-decoration: underline;
+}

@@ -4,6 +4,11 @@
     "src": "resources/css/app.css",
     "isEntry": true
   },
+  "resources/css/vert.css": {
+    "file": "assets/vert-BO_An8cY.css",
+    "src": "resources/css/vert.css",
+    "isEntry": true
+  },
   "resources/js/app.js": {
     "file": "assets/app-DPOe1Gn6.js",
     "name": "app",
