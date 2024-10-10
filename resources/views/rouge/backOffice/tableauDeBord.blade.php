@@ -50,8 +50,8 @@
             @endisset
             <div class="card-body">
                 <h5 class="card-title">{{ $title ?? 'Groupe Bleu' }}</h5>
-                <h6 class="card-text">Chloé, Alexandre, Dylan </h6>
-                {{-- <a href="{{ route('dashboard') }}" class="btn btn-outline-dark" style="width: 80%">Gestion Articles</a> --}}
+                <h6 class="card-text">Chloé, Alexandre, Dylan</h6>
+                <a href="{{ route('bleu.dashboard') }}" class="btn btn-outline-dark" style="width: 80%">Gestion Articles</a>
             </div>
         </div>
     </div>

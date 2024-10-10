@@ -1,10 +1,29 @@
 {
+  "_bootstrap.esm-DiaGsIN1.js": {
+    "file": "assets/bootstrap.esm-DiaGsIN1.js",
+    "name": "bootstrap.esm"
+  },
   "resources/css/404.css": {
     "file": "assets/404-64MI_JIV.css",
     "src": "resources/css/404.css",
     "isEntry": true
   },
   "resources/css/app.css": {
+    "file": "assets/app-CoDpR7nl.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/bleu-admin.css": {
+    "file": "assets/bleu-admin-maiZ5j9x.css",
+    "src": "resources/css/bleu-admin.css",
+    "isEntry": true
+  },
+  "resources/css/bleu-admin.min.css": {
+    "file": "assets/bleu-admin-yAdRimC-.css",
+    "src": "resources/css/bleu-admin.min.css",
+    "isEntry": true
+  },
+  "resources/css/bleu.css": {
     "file": "assets/app-CoDpR7nl.css",
     "src": "resources/css/app.css",
     "isEntry": true
@@ -34,6 +53,11 @@
     "src": "resources/css/vert.css",
     "isEntry": true
   },
+  "resources/css/vertAdmin.css": {
+    "file": "assets/vertAdmin-BSfX3j_W.css",
+    "src": "resources/css/vertAdmin.css",
+    "isEntry": true
+  },
   "resources/js/404.js": {
     "file": "assets/404-J6tAXecC.js",
     "name": "404",
@@ -41,9 +65,29 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-DPOe1Gn6.js",
+    "file": "assets/app-CSNvZO9E.js",
     "name": "app",
     "src": "resources/js/app.js",
+    "isEntry": true,
+    "imports": [
+      "resources/js/bleu-admin.js",
+      "_bootstrap.esm-DiaGsIN1.js"
+    ]
+  },
+  "resources/js/bleu-admin.js": {
+    "file": "assets/bleu-admin-z-Rg4TxU.js",
+    "name": "bleu-admin",
+    "src": "resources/js/bleu-admin.js",
     "isEntry": true
+  },
+  "resources/js/bleu.js": {
+    "file": "assets/bleu-CKWg3C2E.js",
+    "name": "bleu",
+    "src": "resources/js/bleu.js",
+    "isEntry": true,
+    "imports": [
+      "resources/js/bleu-admin.js",
+      "_bootstrap.esm-DiaGsIN1.js"
+    ]
   }
 }
