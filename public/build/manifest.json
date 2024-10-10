@@ -1,4 +1,9 @@
 {
+  "resources/css/404.css": {
+    "file": "assets/404-64MI_JIV.css",
+    "src": "resources/css/404.css",
+    "isEntry": true
+  },
   "resources/css/app.css": {
     "file": "assets/app-CoDpR7nl.css",
     "src": "resources/css/app.css",
@@ -27,6 +32,12 @@
   "resources/css/vert.css": {
     "file": "assets/vert-BO_An8cY.css",
     "src": "resources/css/vert.css",
+    "isEntry": true
+  },
+  "resources/js/404.js": {
+    "file": "assets/404-J6tAXecC.js",
+    "name": "404",
+    "src": "resources/js/404.js",
     "isEntry": true
   },
   "resources/js/app.js": {
