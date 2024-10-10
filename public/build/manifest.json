@@ -4,6 +4,26 @@
     "src": "resources/css/app.css",
     "isEntry": true
   },
+  "resources/css/rougeStyleTableauDeBord.css": {
+    "file": "assets/rougeStyleTableauDeBord-BCAlv92V.css",
+    "src": "resources/css/rougeStyleTableauDeBord.css",
+    "isEntry": true
+  },
+  "resources/css/rougeStyleVueActualite.css": {
+    "file": "assets/rougeStyleVueActualite-DSXD0dqW.css",
+    "src": "resources/css/rougeStyleVueActualite.css",
+    "isEntry": true
+  },
+  "resources/css/rougeStyleVueActualiteCrud.css": {
+    "file": "assets/rougeStyleVueActualiteCrud-l6AaUT7x.css",
+    "src": "resources/css/rougeStyleVueActualiteCrud.css",
+    "isEntry": true
+  },
+  "resources/css/rougeStyleVueActualiteFront.css": {
+    "file": "assets/rougeStyleVueActualiteFront-D4LqP5je.css",
+    "src": "resources/css/rougeStyleVueActualiteFront.css",
+    "isEntry": true
+  },
   "resources/css/vert.css": {
     "file": "assets/vert-BO_An8cY.css",
     "src": "resources/css/vert.css",
