@@ -42,8 +42,17 @@
                         <label class="form-check-label" for="">{{$reponse->reponse}}</label>
                     </div>
                     @endforeach
-                    <button type="submit" class="btn btn-primary mt-3">Valider</button>
+                    <button type="submit" id="submit-btn" class="btn btn-primary mt-3" disabled>Valider</button>
                 </form>
+                <script>
+                    const submitBtn = document.getElementById('submit-btn');
+                    const radioButtons = document.querySelectorAll('input[name="reponse_joueur"]');
+                    radioButtons.forEach(radio => {
+                        radio.addEventListener('change', function() {
+                            submitBtn.disabled = false;
+                        });
+                    });
+                </script>
             </div>
         </div>
 

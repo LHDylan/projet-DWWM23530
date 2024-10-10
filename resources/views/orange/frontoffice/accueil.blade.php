@@ -32,11 +32,16 @@
                     <label for="difficulte">Choisissez votre quiz</label>
                     <select class="form-control" id="quiz" name="quiz">
                         <option value="" disabled selected>Choisissez un quiz</option>
+
+
                         @foreach($quizzes as $quiz)
+                            @if($quiz->questions->isNotEmpty())
                         <option value="{{ $quiz->id }}">
                             {{ $quiz->titre }} (Difficulté: {{ $quiz->difficulte }}, {{ $quiz->categorie->categorie }})
                         </option>
+                            @endif
                         @endforeach
+
                     </select>
                 </div>
                 <button type="submit" class="btn btn-success mb-3">Jouer</button>

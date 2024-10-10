@@ -20,8 +20,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::middleware(['auth', 'admin'])->group(function () {
-    
-    
     Route::get('/quiz/admin', [QuizController::class, 'index'])->name('quiz.index');
     Route::get('/quiz/admin/{id}/edit', [QuizController::class, 'edit'])->name('quiz.edit');
     Route::put('/quiz/admin/{id}', [QuizController::class, 'update'])->name('quiz.update');
@@ -38,7 +36,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('/categories', [CategorieController::class, 'store'])->name('categorie.store');
     Route::put('/categorie/admin/update', [CategorieController::class, 'update'])->name('categorie.update');
     
-    Route::get('/reponse/admin', [ReponseController::class, 'index'])->name('reponse.index');
+    // Route::get('/reponse/admin', [ReponseController::class, 'index'])->name('reponse.index');
     Route::put('/reponse/admin/association_update', [ReponseController::class, 'association_update'])->name('reponse.association_update');
     Route::get('/reponse/admin/create', [ReponseController::class, 'create'])->name('reponse.create');
     Route::post('/reponses', [ReponseController::class, 'store'])->name('reponse.store');
@@ -46,7 +44,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/reponse/admin/{id}/edit', [ReponseController::class, 'edit'])->name('reponse.edit');
     Route::delete('/reponse/admin/{id}', [ReponseController::class, 'destroy'])->name('reponse.destroy');
     
-    Route::get('/question/admin', [QuestionController::class, 'index'])->name('question.index');
+    // Route::get('/question/admin', [QuestionController::class, 'index'])->name('question.index');
     Route::get('/question/admin/create', [QuestionController::class, 'create'])->name('question.create');
     Route::post('/questions', [QuestionController::class, 'store'])->name('question.store');
     Route::put('/qestion/admin/{id}', [QuestionController::class, 'update'])->name('question.update');
