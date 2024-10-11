@@ -10,7 +10,7 @@
             @foreach ($articles as $article)
             <div class="card shadow-lg mt-3 mb-3">
                 <div class="card-image-top d-flex justify-content-center" style="height: 200px;">
-                    <img src="{{asset('storage/'.$article->image_path)}}"  alt="{{isset($article->image_path)? $article->image_path : ''}}">
+                    <img src="{{asset('images/articles/'.$article->image_path)}}"  alt="{{isset($article->image_path)? $article->image_path : ''}}">
                 </div>
                 <div class="d-flex justify-content-between px-3">
                     <h6 class="mb-0">Rédigié par

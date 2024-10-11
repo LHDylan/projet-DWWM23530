@@ -16,7 +16,7 @@
                     <!--Ajout de l'image(si elle existe)-->
                     @if($article->image_path)
                         <div class="card-image-top d-flex justify-content-center" style="height: 400px">
-                            <img src="{{asset('storage/'.$article->image_path)}}"  alt="Image de l'article">
+                            <img src="{{asset('images/articles/'.$article->image_path)}}"  alt="Image de l'article">
                         </div>
                     @else
                         <div class="mb-3  text-center card-image-top bg-dark bg-size-cover" style="height: 150px">

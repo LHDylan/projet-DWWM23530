@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers\Bleu\Client;
 
+use App\Models\Bleu\Tag;
 use App\Models\Bleu\Article;
 use App\Models\Bleu\Comment;
-use App\Models\Bleu\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 use Mews\Purifier\Facades\Purifier;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\Bleu\Client\ArticleRequest;
-
 
 class ArticleController extends Controller
 {
@@ -43,10 +43,14 @@ class ArticleController extends Controller
     {
         Gate::authorize('create', Article::class);
         $validatedData = $articleRequest->validated();
+
         if ($request->hasFile('image')) {
+
             $image = $request->file('image');
-            $imagePath = $image->store('images/articles', 'public');
-            $validatedData['image_path'] = $imagePath;
+            $image_name = time() . '.' . $image->extension();
+            $request->image->move(public_path('images/articles'), $image_name);
+            // $imagePath = $image->move('public/images/articles', $image_name);
+            $validatedData['image_path'] = $image_name;
         }
 
         $validatedData['user_id'] = $request->user()->id;
@@ -85,14 +89,24 @@ class ArticleController extends Controller
     {   
         Gate::authorize('update', $article);
         $validatedData = $articleRequest->validated();
-        if ($articleRequest->hasFile('image')) {
-            if ($article->image_path) {
-                Storage::disk('public')->delete($article->image_path);
-            }
-            $image = $articleRequest->file('image');
-            $imagePath = $image->store('images/articles', 'public');
-            $validatedData['image_path'] = $imagePath;
+
+        if(File::exists(public_path('images/articles/' . $article->image_path))){
+            unlink(public_path('images/articles/' . $article->image_path));
         }
+
+        $image_name = time() . '.' . $articleRequest->image->extension();
+        $articleRequest->image->move(public_path('images/articles'), $image_name);
+        $validatedData['image_path'] = $image_name;
+
+
+        // if ($articleRequest->hasFile('image')) {
+        //     if ($article->image_path) {
+                
+        //     }
+        //     $image = $articleRequest->file('image');
+        //     $imagePath = $image->store('images/articles', 'public');
+        //     $validatedData['image_path'] = $imagePath;
+        // }
 
         $validatedData['content'] = Purifier::clean($validatedData['content']);
         $article->update($validatedData);

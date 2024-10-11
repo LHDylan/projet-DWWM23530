@@ -38,8 +38,8 @@
                     {{--<input type="hidden" value="{{$pseudo->id}}" name="pseudoId" />--}}
                     @foreach($quiz->questions[$numQuestion -1]->reponses as $reponse)
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="reponse_joueur" id="" value="{{$reponse->id}}">
-                        <label class="form-check-label" for="">{{$reponse->reponse}}</label>
+                        <input class="form-check-input" type="radio" name="reponse_joueur" id="{{$reponse->id}}" value="{{$reponse->id}}">
+                        <label class="form-check-label" for="{{$reponse->id}}">{{$reponse->reponse}}</label>
                     </div>
                     @endforeach
                     <button type="submit" id="submit-btn" class="btn btn-primary mt-3" disabled>Valider</button>

@@ -18,7 +18,7 @@
                     <div class="card-body p-2">
                         @if($article->image_path)
                         <div class="card-image-top d-flex justify-content-center" style="height: 333px;">
-                            <img src="{{asset('storage/'.$article->image_path)}}" alt="Image de l'article" class="img-fluid rounded">
+                            <img src="{{asset('images/articles/'.$article->image_path)}}" alt="Image de l'article" class="img-fluid rounded">
                         </div>
                         @else
                         <div class="mb-3  text-center card-image-top bg-dark bg-size-cover" style="height: 150px">

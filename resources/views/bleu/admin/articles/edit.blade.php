@@ -33,7 +33,7 @@
                 <!--Ajout de l'image(si elle existe)-->
                 @if($article->image_path)
                     <div class="card-image-top">
-                        <img src="{{asset('storage/'.$article->image_path)}}" alt="Image de l'article" class="img-fluid rounded">
+                        <img src="{{asset('images/articles/'.$article->image_path)}}" alt="Image de l'article" class="img-fluid rounded">
                 @else
                         <div class="mb-3  text-center">
                             <img src="https://www.freeiconspng.com/uploads/no-image-icon-15.png" alt="No image"> <!-- Icône appareil photo barrée -->
