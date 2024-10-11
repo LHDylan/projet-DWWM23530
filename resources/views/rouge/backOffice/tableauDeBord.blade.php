@@ -1,8 +1,8 @@
 <x-admin-layout>
 @vite(['resources/css/rougeStyleTableauDeBord.css', 'resources/js/app.js'])
 
-    <div class="titre">
-        <h1>Bonjour, ((admin))</h1>
+    <div class="titre mt-5">
+        <h1>Bonjour, {{ Auth::user()->name }}</h1>
     </div>
 
     <div class="parent">
@@ -39,8 +39,8 @@
             <div class="card-body">
                 <h5 class="card-title">{{ $title ?? 'Groupe Vert' }}</h5>
                 <h6 class="card-text">Jordan, David-Antoine, Fabien, Florian </h6>
-                <a href="" class="btn btn-outline-dark" style="width: 80%">Inscription</a>
-                <a href="" class="btn btn-outline-dark" style="width: 80%">Messagerie</a>
+                <a href="{{ route('vert.admin.inscriptions_en_attente') }}" class="btn btn-outline-dark" style="width: 80%">Inscription</a>
+                {{-- <a href="" class="btn btn-outline-dark" style="width: 80%">Messagerie</a> --}}
             </div>
         </div>
 

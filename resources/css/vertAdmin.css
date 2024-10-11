@@ -121,7 +121,7 @@ h1 {
   }
   
   /* Bouton de suppression */
-  .btn-danger {
+  .btn-dark {
       background-color: #000;
       border: none;
       color: #fff;
@@ -130,6 +130,16 @@ h1 {
       border-radius: 0.3rem;
       transition: background-color 0.2s ease, transform 0.1s ease;
   }
+
+    /* Bouton de suppression in pending */
+    .btn-danger {
+        border: none;
+        color: #fff;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.6rem;
+        border-radius: 0.3rem;
+        transition: background-color 0.2s ease, transform 0.1s ease;
+    }
   
   .btn-danger:hover {
       background-color: #333;

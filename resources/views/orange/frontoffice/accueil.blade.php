@@ -3,7 +3,7 @@
     <div class="d-flex justify-content">
 
        {{-- <a href="{{ route('accessibilite.index') }}" class="btn btn-secondary">Accessibilité</a>--}}
-        <a href="{{ route('quiz.index') }}" class="btn btn-primary">Admin</a>
+        {{-- <a href="{{ route('quiz.index') }}" class="btn btn-primary">Admin</a> --}}
 
     </div>
 

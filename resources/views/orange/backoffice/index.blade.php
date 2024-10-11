@@ -4,8 +4,12 @@
     <p>{{ session()->get('success') }}</p>
 </div>
 @endif
-<a href="{{route('accueil.index')}}" class="btn btn-primary">Accueil</a>
-<h1 class="text-center">Gestion des quiz</h1>
+<div class="d-flex justify-content-end mt-3 me-3">
+    <a href="{{route('admin')}}" class="btn btn-primary ">Dashboard</a>
+</div>
+<div class="d-flex justify-content-center">
+    <h1 class="text-center">Gestion des quiz</h1>
+</div>
 <a href="{{route('question.create')}}">Gestion des questions</a>
 <a href="{{ route('quiz.create') }}">Nouveau quiz</a>
 <a href="{{ route('categorie.create') }}">Gestion des catégories</a>

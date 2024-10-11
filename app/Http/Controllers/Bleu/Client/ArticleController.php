@@ -49,7 +49,6 @@ class ArticleController extends Controller
             $image = $request->file('image');
             $image_name = time() . '.' . $image->extension();
             $request->image->move(public_path('images/articles'), $image_name);
-            // $imagePath = $image->move('public/images/articles', $image_name);
             $validatedData['image_path'] = $image_name;
         }
 
@@ -97,16 +96,6 @@ class ArticleController extends Controller
         $image_name = time() . '.' . $articleRequest->image->extension();
         $articleRequest->image->move(public_path('images/articles'), $image_name);
         $validatedData['image_path'] = $image_name;
-
-
-        // if ($articleRequest->hasFile('image')) {
-        //     if ($article->image_path) {
-                
-        //     }
-        //     $image = $articleRequest->file('image');
-        //     $imagePath = $image->store('images/articles', 'public');
-        //     $validatedData['image_path'] = $imagePath;
-        // }
 
         $validatedData['content'] = Purifier::clean($validatedData['content']);
         $article->update($validatedData);
